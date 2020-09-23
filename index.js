@@ -1,13 +1,22 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+let votingAge
+let age
 
-
-
+if (age > 18) {
+    votingAge = "true"
+}
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let num1 = "left"
+let num2 
 
+if (num2 = 1, 3, 5, 7, 9) {
+    num1 = "right"
+}
+console.log()
 
 
 
@@ -18,8 +27,10 @@
 
 
 //Task d: Write a function to multiply a*b 
-
-
+let x = multi(10, 5)
+function multi ( a, b) {
+    return a * b;
+}
 
 
 
@@ -27,9 +38,11 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
-
-
+let myAge = dogAge
+let dogAge = x
+function x(a) {
+    return a * 7
+}
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
@@ -50,9 +63,35 @@
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
 
+function dogfeeder (age, weight) {
+    if(age >= 1){
+        if(weight < 6){
+            return(weight * .05)
+        }
+        else if(weight < 11){
+            return(weight * .04)
+        }
+        else if(weight < 16){
+            return(weight * .03)
+        }
+        else{
+            return(weight * .02)
+        }
+    }
+    else{
+        if(age < .5){
+            return(weight * .1)
+        }
+        else if(age < .8){
+            return(weight * .05)
+        }
+        else{
+            return(weight * .04)
+        }
+    }
+}
 
-
-
+console.log(dogfeeder(12, 37))
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
@@ -60,19 +99,71 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+function game (myhand) {
+    let computer = Math.round(Math.random() * 3);
+    if (myhand === "rock"){
+      if (computer === 1){
+        console.log("Tie game.");
+      }
+      if (computer === 2 ){
+        console.log("You lose.");
+      }
+      if (computer === 3){
+        console.log("You win.");
+      }
+    }
+    else if (myhand === "paper"){
+      if (computer === 1){
+        console.log("You win.");
+      }
+      if (computer === 2){
+        console.log("Tie game.");
+      }
+      if (computer ===3){
+        console.log("You lose.");
+      }
+    }
+    else if (myhand === "scissors"){
+      if (computer === 1){
+        console.log("You lose.");
+      }
+      if (computer === 2){
+        console.log ("You win.");
+      }
+      else {
+        console.log ("Tie game.");
+      }
+    }
+  }
   
+  console.log(RPS("scissors"));
+
+
+
+
+
+
+
+
+
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
-
-
-
+function kmtomiles (num) {
+    return (num * 0.621371);
+  }
+  
+  kmConverter(16);
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function fttocm (num) {
+    return (num * 30.48);
+  }
+  
+  ftConverter(33);
 
 
 
@@ -82,8 +173,13 @@
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
-
+function annoyingSong (count) {
+    for (let bottles = count; bottles > 0; bottles--) {
+      console.log (`${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${bottles-1} bottles of soda on the wall`);
+    }
+  }
+  
+  annoyingSong(99);
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -95,7 +191,23 @@
 //60s should be D 
 //and anything below 60 should be F
   
-
+let grade
+let percent
+if (percent >= 90) {
+    grade = "A"
+}
+else if (percent >= 80) {
+    grade = "B"
+}
+else if (percent >= 70) {
+    grade = "C"
+}
+else if (percent >= 60) {
+    grade = "D"
+}
+else if (percent < 60) {
+    grade = "F"
+}
   
   
 
